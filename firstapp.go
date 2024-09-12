@@ -14,4 +14,7 @@ func main() {
   evenMoreLuckyNumber := luckyNumber + 5
   fmt.Println(luckyNumber)
   fmt.Println(evenMoreLuckyNumber)
+
+  evenMoreLuckyNumber = luckyNumber * 3
+  fmt.Println(evenMoreLuckyNumber)
 }
