@@ -12,9 +12,9 @@ func main() {
   
   luckyNumber := 17
   evenMoreLuckyNumber := luckyNumber + 5
-  fmt.Println(luckyNumber)
-  fmt.Println(evenMoreLuckyNumber)
+  fmt.Println(luckyNumber) //17
+  fmt.Println(evenMoreLuckyNumber) //22
 
   evenMoreLuckyNumber = luckyNumber * 3
-  fmt.Println(evenMoreLuckyNumber)
+  fmt.Println(evenMoreLuckyNumber) //51
 }
