@@ -7,6 +7,9 @@ func main() {
   //greetingText = "Hello World!"
   //var greetingText string = "Hello World!"
   greetingText := "Hello World!"
+  luckyNumber := 17
+  
   fmt.Println(greetingText)
   //fmt.Println("Hello World!")
+  fmt.Println(luckyNumber)
 }
