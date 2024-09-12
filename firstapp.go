@@ -7,7 +7,7 @@ func main() {
   //greetingText = "Hello World!"
   //var greetingText string = "Hello World!"
   greetingText := "Hello World!"
-  luckyNumber := 17
+  luckyNumber := -21561325123017
   
   fmt.Println(greetingText)
   //fmt.Println("Hello World!")
