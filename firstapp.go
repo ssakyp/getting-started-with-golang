@@ -3,13 +3,15 @@ package main
 import "fmt"
 
 func main() {
+  //fmt.Println("Hello World!")
   //var greetingText string
   //greetingText = "Hello World!"
   //var greetingText string = "Hello World!"
   greetingText := "Hello World!"
-  luckyNumber := -21561325123017
-  
   fmt.Println(greetingText)
-  //fmt.Println("Hello World!")
+  
+  luckyNumber := 17
+  evenMoreLuckyNumber := luckyNumber + 5
   fmt.Println(luckyNumber)
+  fmt.Println(evenMoreLuckyNumber)
 }
