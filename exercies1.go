@@ -8,10 +8,11 @@ func main() {
   fmt.Println(firstName," ", lastName)
 
   currentYear := 2024
-  var birthYear int = 1996
+  var birthYear = 1996
   age := currentYear - birthYear
-  nextYear := currentYear + 1
+  currentYear = currentYear + 1
   fmt.Println(age)
-  fmt.Println(nextYear)
+  age = currentYear - birthYear
+  fmt.Println(age)
 
 }
