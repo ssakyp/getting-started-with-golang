@@ -1,3 +1,3 @@
 package greeting
 
-var greetingText = "Hello World!"
+var GreetingText = "Hello World!"
