@@ -9,7 +9,7 @@ func main() {
   //greetingText = "Hello World!"
   //var greetingText string = "Hello World!"
   
-  fmt.Println(greeting.greetingText)
+  fmt.Println(greeting.GreetingText)
   
   luckyNumber := 17
   evenMoreLuckyNumber := luckyNumber + 5
