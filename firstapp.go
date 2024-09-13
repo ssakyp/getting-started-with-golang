@@ -23,4 +23,7 @@ func main() {
 
   fmt.Println(defaultFloat) //1.1234567891456231
   fmt.Println(smallFloat) //1.1234567
+
+  var firstRune rune = '€'
+  fmt.Println(firstRune) //8364
 }
