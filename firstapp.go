@@ -35,8 +35,8 @@ func main() {
   firstName := "Sultan"
   lastName := "Sakyp"
   fullName := firstName + " " + lastName
-
-  fmt.Println("Hi, my full name is " + fullName)
+  age := 27
+  fmt.Printf("Hi, I am %v and I am %v years old.", fullName, age)
   //fmt.Println("9" + 1) not allowed
   
 }
