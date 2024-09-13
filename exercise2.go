@@ -8,6 +8,6 @@ func main() {
   var circ float64 = 2 * pi * float64(radii)
 
   fmt.Println(circ)
-  fmt.Printf("For a radius of %v, the circle circumference is %v.", radii, circ)
+  fmt.Printf("For a radius of %v, the circle circumference is %.2f.", radii, circ)
 
 }
