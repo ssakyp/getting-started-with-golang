@@ -30,5 +30,6 @@ func main() {
 
   var firstByte byte = 'a'
   fmt.Println(firstByte) // 97
+  fmt.Println(string(firstByte)) // a
   
 }
