@@ -1,6 +1,7 @@
 package main
 
 import "fmt"
+import "getting-started-with-golang/greeting"
 
 func main() {
   //fmt.Println("Hello World!")
@@ -8,7 +9,7 @@ func main() {
   //greetingText = "Hello World!"
   //var greetingText string = "Hello World!"
   
-  fmt.Println(greetingText)
+  fmt.Println(greeting.greetingText)
   
   luckyNumber := 17
   evenMoreLuckyNumber := luckyNumber + 5
