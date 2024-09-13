@@ -27,4 +27,8 @@ func main() {
   var firstRune rune = '€'
   fmt.Println(string(firstRune)) //8364
   fmt.Println(firstRune) //€
+
+  var firstByte byte = 'a'
+  fmt.Println(firstByte) // 97
+  
 }
