@@ -34,8 +34,9 @@ func main() {
 
   firstName := "Sultan"
   lastName := "Sakyp"
+  fullName := firstName + " " + lastName
 
-  fullName := firstName + lastName
-  fmt.Println(fullName)
+  fmt.Println("Hi, my full name is " + fullName)
+  //fmt.Println("9" + 1) not allowed
   
 }
