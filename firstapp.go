@@ -25,5 +25,6 @@ func main() {
   fmt.Println(smallFloat) //1.1234567
 
   var firstRune rune = '€'
-  fmt.Println(firstRune) //8364
+  fmt.Println(string(firstRune)) //8364
+  fmt.Println(firstRune) //€
 }
