@@ -34,7 +34,7 @@ func main() {
 
   firstName := "Sultan"
   lastName := "Sakyp"
-  fullName := firstName + " " + lastName
+  fullName := fmt.Sprintf("%v %v", firstName, lastName)
   age := 27
   fmt.Printf("Hi, I am %v and I am %v (Type: %T) years old.", fullName, age, age)
   //fmt.Println("9" + 1) not allowed
