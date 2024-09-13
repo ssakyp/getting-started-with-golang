@@ -15,6 +15,6 @@ func main() {
   fmt.Println(luckyNumber) //17
   fmt.Println(evenMoreLuckyNumber) //22
 
-  evenMoreLuckyNumber = luckyNumber * 3
-  fmt.Println(evenMoreLuckyNumber) //51
+  var newNumber float64 = float64(luckyNumber) / 3
+  fmt.Println(evenMoreLuckyNumber) // 5...
 }
