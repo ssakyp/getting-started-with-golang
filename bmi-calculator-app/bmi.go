@@ -26,8 +26,10 @@ func main() {
 	heightInput = strings.Replace(heightInput, "\n", "", -1)
 	weight, _:= strconv.ParseFloat(weightInput, 64)
 	height, _ := strconv.ParseFloat(heightInput, 64)
-	fmt.Print(weightInput, heightInput)
+	// fmt.Print(weightInput, heightInput)
 
 	//Calculate the BMI  (weight / (height * heigh))
+	bmi := weight / (height * height)
 	//Output the calculated BMI
+	fmt.Printf("Your Body Mass Index is %.2f", bmi)
 }
