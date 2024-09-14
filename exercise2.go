@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-  var pi float64 = 3.14
+  const pi float64 = 3.14
   var radii int = 5
   var circ float64 = 2 * pi * float64(radii)
 
