@@ -4,22 +4,19 @@ import (
 	"fmt"
 	"strconv"
 	"strings"
-)
 
-const mainTitle = "BMI Calculator"
-const separator = "------------------"
-const weightPrompt = "Please enter your weight in (kg):"
-const heightPrompt = "Please enter your height in (m): "
+	"github.com/ssakyp/bmi-calculator-app/info"
+)
 
 func main() {
 	//Output information
-	fmt.Println(mainTitle)
-	fmt.Println(separator)
+	fmt.Println(info.MainTitle)
+	fmt.Println(info.Separator)
 	//Prompt for user input (weight + height)
-	fmt.Println(weightPrompt)
+	fmt.Println(info.WeightPrompt)
 	weightInput, _ := reader.ReadString('\n')
 
-	fmt.Println(heightPrompt)
+	fmt.Println(info.HeightPrompt)
 	heightInput, _ := reader.ReadString('\n')
 
 	//Save that user input in variables
