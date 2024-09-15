@@ -12,8 +12,9 @@ func main() {
 	
 }
 
-func add(num1, num2 int) int {
-	return num1 + num2
+func add(num1, num2 int) (sum int) {
+	sum = num1 + num2
+	return sum
 }
 
 func printNumber(num int) {
