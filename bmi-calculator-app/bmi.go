@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 
 	"github.com/ssakyp/bmi-calculator-app/info"
 )
@@ -12,7 +11,10 @@ func main() {
 	
 	weight, height := getUserMetrics()
 	//Calculate the BMI  (weight / (height * heigh))
-	bmi := weight / (height * height)
-	//Output the calculated BMI
-	fmt.Printf("Your Body Mass Index is %.2f\n", bmi)
+	bmi := calculateBMI(weight, height)
+	printBMI(bmi)
+}
+
+func calculateBMI(weight, height float64) float64 {
+	return weight / (height * height)
 }
