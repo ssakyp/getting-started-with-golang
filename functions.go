@@ -21,6 +21,8 @@ func printNumber(num int) {
 	fmt.Printf("The number is %v\n",num)
 }
 
-func generateRandomNumbers() (int, int) {
-	return rand.Intn(65), rand.Intn(30)
+func generateRandomNumbers() (r1 int, r2 int) {
+	r1 = rand.Intn(65)
+	r2 = rand.Intn(30)
+	return r1, r2
 }
