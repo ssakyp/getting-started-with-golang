@@ -6,11 +6,10 @@ import (
 )
 
 func main() {
-	a := 5
-	b := 6
+	a, b := generateRandomNumbers()
 	sum := add(a, b)
 	printNumber(sum)
-	printNumber(generateRandomNumbers())
+	
 }
 
 func add(num1, num2 int) int {
@@ -21,6 +20,6 @@ func printNumber(num int) {
 	fmt.Printf("The number is %v\n",num)
 }
 
-func generateRandomNumbers() int {
-	return rand.Intn(65)
+func generateRandomNumbers() (int, int) {
+	return rand.Intn(65), rand.Intn(30)
 }
