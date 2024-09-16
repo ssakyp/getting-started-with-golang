@@ -15,12 +15,13 @@ func main() {
 
   doubledAge := double(myAge)
   fmt.Println(doubledAge) // 66
-  fmt.Println(age) //66
+  fmt.Println(age) //100
 }
 
 //go is creating a copy
 
 func double(number *int) int {
   result := *number * 2
+  *number = 100
   return result
 }
