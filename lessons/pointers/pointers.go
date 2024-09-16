@@ -18,5 +18,7 @@ func main() {
 }
 
 func double(number int) int {
-  return number *2
+  result := number * 2
+  number = 100
+  return result
 }
