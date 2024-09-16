@@ -7,6 +7,7 @@ func main() {
 
   //var myAge *int
   myAge := &age
+  *myAge = 33 / changing the value
   fmt.Println(myAge) //0xc00001c070
-  fmt.Println(*myAge) // 32 => dereferencing prints the value stored on that address
+  fmt.Println(*myAge) // 33 => dereferencing prints the value stored on that address
 }
