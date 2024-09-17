@@ -31,11 +31,17 @@ func main() {
   //   createdDate: created,
   // }
 
-  newUser = User {
-    firstName,
-    lastName,
-    birthDate,
-    created,
+  // newUser = User {
+  //   firstName,
+  //   lastName,
+  //   birthDate,
+  //   created,
+  // }
+
+  newUser = User{
+    firstName: firstName,
+    birthDate: birthDate,
+    dateCreated: created,
   }
   
   // ... do something awesome with that gathered data!
