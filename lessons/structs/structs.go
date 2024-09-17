@@ -15,14 +15,14 @@ type User struct {
   createdDate time.Time
 }
 
-func NewUser(fName string, lName string, bDate string) User {
+func NewUser(fName string, lName string, bDate string) *User {
   created := time.Now()
   user := User{
     firstName: fName,
     lastName: lName,
     createdDate: created,
   }
-  return user
+  return &user
 }
 
 var reader = bufio.NewReader(os.Stdin)
@@ -34,7 +34,7 @@ func main() {
   birthDate := getUserData("Please enter your birthdate (MM/DD/YYYY): ")
   // created := time.Now()
 
-  newUser = NewUser(firstName, lastName, birthDate)
+  newUser = *NewUser(firstName, lastName, birthDate)
   
   // newUser = User {
   //   firstName: firstName, 
