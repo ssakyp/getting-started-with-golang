@@ -11,10 +11,10 @@ type Book struct {
 
 func NewBook(id int, title string, shortDescription string, price float64) *Book {
   newBook := Book {
-    id: id
-    title: title
-    shortDescription: shortDescription
-    pirce: price
+    id: id,
+    title: title,
+    shortDescription: shortDescription,
+    pirce: price,
   }
   return &newBook
 }
