@@ -28,11 +28,12 @@ func main() {
     firstName: firstName, 
     lastName: lastName
     birthDate: birthDate,
-    createdDate: createdDate,
+    createdDate: created,
   }
   // ... do something awesome with that gathered data!
 
-  fmt.Println(firstName, lastName, birthDate, created)
+  //fmt.Println(firstName, lastName, birthDate, created)
+  fmt.Println(newUser)
 }
 
 func getUserData(promptText string) string {
