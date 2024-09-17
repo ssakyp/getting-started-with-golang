@@ -24,12 +24,20 @@ func main() {
   birthDate := getUserData("Please enter your birthdate (MM/DD/YYYY): ")
   created := time.Now()
 
+  // newUser = User {
+  //   firstName: firstName, 
+  //   lastName: lastName
+  //   birthDate: birthDate,
+  //   createdDate: created,
+  // }
+
   newUser = User {
-    firstName: firstName, 
-    lastName: lastName
-    birthDate: birthDate,
-    createdDate: created,
+    firstName,
+    lastName,
+    birthDate,
+    created,
   }
+  
   // ... do something awesome with that gathered data!
 
   //fmt.Println(firstName, lastName, birthDate, created)
