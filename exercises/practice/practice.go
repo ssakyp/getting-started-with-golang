@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 type Book struct {
   id int
   title string
