@@ -16,7 +16,7 @@ type User struct {
 }
 
 func (user *User) outputDetails() {
-  fmt.Printf("My name is %v %v (born on %v)", (*user).firstName, user.lastName, user.birthDate)
+  fmt.Printf("My name is %v %v (born on %v)", user.firstName, user.lastName, user.birthDate)
 }
 
 func NewUser(fName string, lName string, bDate string) *User {
