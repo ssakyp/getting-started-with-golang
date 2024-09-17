@@ -8,17 +8,31 @@ import (
   "time"
 )
 
+type User struct {
+  firstName string
+  lastName string
+  birthDate string
+  createdDate time.Time
+}
+
 var reader = bufio.NewReader(os.Stdin)
 
 func main() {
+  var newUser User
   firstName := getUserData("Please enter your first name: ")
   lastName := getUserData("Please enter your last name: ")
   birthDate := getUserData("Please enter your birthdate (MM/DD/YYYY): ")
   created := time.Now()
 
+  newUser = User {
+    firstName: firstName, 
+    lastName: lastName
+    birthDate: birthDate,
+    createdDate: createdDate,
+  }
   // ... do something awesome with that gathered data!
 
-  fmt.Println(firstName, lastName, birthdate, created)
+  fmt.Println(firstName, lastName, birthDate, created)
 }
 
 func getUserData(promptText string) string {
