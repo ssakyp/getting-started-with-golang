@@ -15,6 +15,22 @@ type Product struct {
 	price            float64
 }
 
+func (prod *Product) store() {
+	file, _ := os.Craete(prod.id)
+
+	content := fmt.Sprintf(
+		"ID: %v\nTitle: %v\nDescription: %v\nPrice: %.2f\n", 
+		prod.id, 
+		prod.title, 
+		prod.description, 
+		prod.price,
+	)
+	
+	file.WriteString(content)
+
+	file.Close()
+}
+
 func NewProduct(id string, t string, s string, p float64) *Product {
 	return &Product{id, t, s, p}
 }
@@ -42,6 +58,8 @@ func main() {
 
 	createdProduct := getPrduct()
 	createdProduct.printData()
+
+	createdProduct.store()
 	
 
 }
