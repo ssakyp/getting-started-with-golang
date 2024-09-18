@@ -58,6 +58,6 @@ func main() {
 func getUserData(promptText string) string {
 	fmt.Print(promptText)
 	userData, _ := reader.ReadString('\n')
-	cleanedData := strings.Replace(userData, "\n", -1)
+	cleanedData := strings.Replace(userData, "\n", "", -1)
 	return cleanedData
 }
