@@ -1,9 +1,10 @@
 package main
 
 import (
-	"fmt"
 	"bufio"
+	"fmt"
 	"os"
+	"strconv"
 	"strings"
 )
 
@@ -44,15 +45,14 @@ func main() {
 
 	var userBook Book
 	id := getUserData("Enter the book ID: ")
-	idNum, _ := strconv.ParseInt(id, 32)
+	idNum, _ := strconv.Atoi(id)
 	title := getUserData("Enter the title of the book: ")
 	description := getUserData("Enter the description of the book: ")
 	price := getUserData("Enter the price of the book: ")
 	priceFloat, _ := strconv.ParseFloat(price, 64)
-	userBook = Book {idNum, title, description, priceFloat,}
+	userBook = Book{idNum, title, description, priceFloat}
 	userBook.outputDetails()
-	
-	
+
 }
 
 func getUserData(promptText) string {
