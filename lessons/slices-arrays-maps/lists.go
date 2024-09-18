@@ -24,9 +24,10 @@ type Product struct {
 
 func main() {
   var productNames [5]string
+  productNames = [5]string{"A book"}
   prices := [4]float64{10.99, 93.11, 45.11, 20.45}
   fmt.Println(prices)
-  fmt.Println(productNames) //[   ]
+  fmt.Println(productNames) //[A book   ]
 }
 
 
