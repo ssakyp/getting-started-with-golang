@@ -8,41 +8,40 @@ import (
 	"strings"
 )
 
-type Book struct {
-	id               int
+type Product struct {
+	id               string
 	title            string
-	shortDescription string
+	description 	 string
 	price            float64
 }
 
-func NewBook(id int, title string, shortDescription string, price float64) *Book {
-	newBook := Book{
-		id:               id,
-		title:            title,
-		shortDescription: shortDescription,
-		price:            price,
-	}
-	return &newBook
+func NewProduct(id string, t string, s string, p float64) *Product {
+	return &Product{id, t, s, p}
 }
 
-func (book *Book) outputDetails() {
-	fmt.Printf("The %v is %v with id of %v costs %v", book.title, book.shortDescription, book.id, book.price)
+func (prod *Product) printData() {
+	fmt.Printf("ID: %v\n", prod.id)
+	fmt.Printf("Title: %v\n", prod.title)
+	fmt.Printf("Description: %v\n", prod.description)
+	fmt.Printf("Price:  USD %.2f\n", prod.price)
 }
 
 var reader = bufio.NewReader(os.Stdin)
 
 func main() {
-	var newBook Book
-	newBook = Book{
-		24,
+	firstProduct := Product {
+		"first-product",
 		"A book",
-		"Very interesting book",
-		25.4,
+		"A nice book",
+		10.99
 	}
-	fmt.Println(newBook)
-	anotherBook := NewBook(29, "The second Book", "Not that much interesting", 9.01)
-	anotherBook.outputDetails()
+	secondProduct := NewProduct("second-product", "A Carpet", "A beautiful carpet", 99.99)
+	//fmt.Println(firstProduct)
+	//fmt.Println(secodnProduct)
 
+	firstProduct.printData()
+	secondProduct.printData()
+	
 	var userBook Book
 	id := getUserData("Enter the book ID: ")
 	idNum, _ := strconv.Atoi(id)
