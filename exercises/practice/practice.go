@@ -1,6 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"bufio"
+	"os"
+	"strings"
+)
 
 type Book struct {
 	id               int
@@ -23,6 +28,8 @@ func (book *Book) outputDetails() {
 	fmt.Printf("The %v is %v with id of %v costs %v", book.title, book.shortDescription, book.id, book.price)
 }
 
+var reader = bufio.NewReader(os.Stdin)
+
 func main() {
 	var newBook Book
 	newBook = Book{
@@ -34,4 +41,23 @@ func main() {
 	fmt.Println(newBook)
 	anotherBook := NewBook(29, "The second Book", "Not that much interesting", 9.01)
 	anotherBook.outputDetails()
+
+	var userBook Book
+	id := getUserData("Enter the book ID: ")
+	idNum, _ := strconv.ParseInt(id, 32)
+	title := getUserData("Enter the title of the book: ")
+	description := getUserData("Enter the description of the book: ")
+	price := getUserData("Enter the price of the book: ")
+	priceFloat, _ := strconv.ParseFloat(price, 64)
+	userBook = Book {idNum, title, description, priceFloat,}
+	userBook.outputDetails()
+	
+	
+}
+
+func getUserData(promptText) string {
+	fmt.Print(promptText)
+	userData, _ := reader.ReadString('\n')
+	cleanedData := strings.Replace(userData, "\n", -1)
+	return cleanedData
 }
