@@ -39,6 +39,31 @@ func main() {
 
   secondFeaturedPrices := prices[:3] // slice start from the beginning up to 3 but excluding it
   fmt.Println(secondFeaturedPrices) // [10.99 93.11 45.11]
+
+  anotherPrices := prices[1:] // starts from index 1 up to the end of the array
+  anotherPrice[0] = 199.99 // this slice is just a window and if something is changed then it affects the original array
+  // this slice is just a tiny refernce to that array
+  // it is a memory efficient way selecting parts of arrays
+  fmt.Println(anotherPrices) // [199.99 45.11 20.45]
+  fmt.Println(prices) // [10.99 199.99 45.11 20.45]
+
+
+  // go saves a metadata for a slice
+  // for every slice we have a length and a capacity
+  fmt.Println(len(anotherPrices), cap(anotherPrices)) // we can output the length with a built-in function len => 3 | cap is also a default go function => 3
+  // the length gives us the number of items in a slice or array
+  // the capacity is a bit more complex, it is the same value here, but it would have been different
+ 
+  highlightedPrices := anotherPrices[:1] // every element starting from the index 0 up to index 1 excluding
+  fmt.Println(highlightedPrices) // [199.99]
+  fmt.Println(len(highlightedPrices), cap(highlightedPrices)) // 1 3
+
+  highlightedPrices = highlightedPrices[:3] // reslicing
+  fmt.Println(highlightedPrices) // [199.99 45.11 20.45]
+  fmt.Println(len(highlightedPrices), cap(highlightedPrices)) // 3 3
+
+  //we can select more towards right side of the array not the left side
+  
 }
 
 
