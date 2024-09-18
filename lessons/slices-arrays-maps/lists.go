@@ -24,8 +24,8 @@ type Product struct {
 
 func main() {
   //var productNames [5]string
-  var productNames [5]string = [5]string{"A book"}
   //productNames = [5]string{"A book"}
+  var productNames [5]string = [5]string{"A book"}
   prices := [4]float64{10.99, 93.11, 45.11, 20.45}
   fmt.Println(prices)
 
@@ -33,6 +33,10 @@ func main() {
   
   fmt.Println(productNames) //[A book  A carpet  ]
   fmt.Println(prices[2]) //45.11
+
+  featuredPrices := prices[1:3] //slice => start at index 1 and excluding index 3
+  fmt.Println(featuredPrices) //[93.11 45.11]
+  
 }
 
 
