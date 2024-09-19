@@ -3,15 +3,17 @@ package main
 import "fmt"
 
 func main() {
-  prices := []float64{10.99, 8.99}
-  fmt.Println(prices[1]) //8.99
-  fmt.Println(prices[0:1]) // 10.99
-  prices[1] = 1.11
-  //prices[2] => out of range => panics
-  updatedPrices := append(prices, 5.99)
-  prices = append(prices, 4.87)
-  fmt.Println(updatedPrices) // [10.99 1.11 5.99]
-  fmt.Println(prices) // [10.99 1.11 4.87]
-  prices = prices[1:] //[1.11 4.87]
+  hobbies := [3]string{"tennis", "filmmaking", "coding"}
+  fmt.Println(hobbies)
+  fmt.Println(hobbies[0])
+  fmt.Println(hobbies[1:])
+  var firstHobbies []string
+  firstHobbies = hobbies[0:2]
+  secondHobbies := []string{hobbies[0], hobbies[1]}
+  fmt.Println(firstHobbies)
+  fmt.Println(secondHobbies)
+  firstHobbies = firsHobbies[1:]
+  fmt.Println(firstHobbies)
+  
   
 }
