@@ -35,5 +35,8 @@ func main() {
 	secondProd := Product {"A carpet", "second-product", 45.11}
 	products := []Product{firstProd, secondProd}
 	fmt.Println(products)
+	thirdProd := Product{"a phone", "third-product", 482.1}
+	products = append(products, thirdProd)
+	fmt.Println(products)
 
 }
