@@ -27,9 +27,9 @@ func main() {
 	fmt.Println(dynamicArray)
 
 	firstProd := Product {
-		"A book"
-		"first-product"
-		2.44
+		"A book",
+		"first-product",
+		2.44,
 	}
 
 	secondProd := Product {"A carpet", "second-product", 45.11}
