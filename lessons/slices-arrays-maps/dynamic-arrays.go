@@ -12,5 +12,6 @@ func main() {
   prices = append(prices, 4.87)
   fmt.Println(updatedPrices) // [10.99 1.11 5.99]
   fmt.Println(prices) // [10.99 1.11 4.87]
+  prices = prices[1:] //[1.11 4.87]
   
 }
