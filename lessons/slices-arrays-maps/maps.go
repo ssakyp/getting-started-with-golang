@@ -13,5 +13,11 @@ func main() {
   websites["LinkedIn"] = "https://linkedin.com" // can be easily added
   delete(websites, "Google")
   fmt.Println(websites) // no google
+
+  // Why maps?
+  // For maps anything can be used as a key => more flexibility
+  // Structs - predefined data structures => key value pairs cannot be deleted
+  // Structs - clearly defined list of fields
+  // Maps = arrays but instead of indexes keys
   
 }
