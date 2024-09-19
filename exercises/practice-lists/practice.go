@@ -15,4 +15,11 @@ func main() {
 	firstHobbies = firstHobbies[1:3]
 	fmt.Println(firstHobbies)
 
+	dynamicArray := []string{"software engineer", "algorithm expert"}
+	fmt.Println(dynamicArray)
+	dynamicArray[1] = "AlgoExpert"
+	dynamicArray = append(dynamicArray, "systems expert")
+	fmt.Println(dynamicArray)
+	
+
 }
