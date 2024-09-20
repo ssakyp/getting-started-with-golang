@@ -95,7 +95,13 @@ func calculateListSum() {
   sum := 0
   for index, value := range inputNumbers{
     fmt.Printf("Index: %v, Value: %v\n", index, value)
-    number, _ := strconv.ParseInt(value, 0, 64)
+    number, err := strconv.ParseInt(value, 0, 64)
+
+    if err != nil {
+      continue
+      // skips the iteration and goes to next
+      //break stops complete loop
+    }
     sum = sum + int(number)
     fmt.Printf("Result: %v\n", sum)
   }
