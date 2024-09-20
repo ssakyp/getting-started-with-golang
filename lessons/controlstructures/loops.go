@@ -40,10 +40,13 @@ func calculateSumUpToNumber() {
   }
 
   fmt.Println(chosenNumber)
+
+  sum := 0
   
-  for i := 0; i < 5; i++ {
-    fmt.Println(i)
+  for i := 1; i <= chosenNumber; i++ {
+    sum = sum + i
   }
+  fmt.Printf("Result: %v", sum)
 
 }
 func calculateFactorial() {}
