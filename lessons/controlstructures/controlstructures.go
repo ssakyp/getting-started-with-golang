@@ -11,4 +11,8 @@ func main() {
   userAgeInput := reader.ReadString('\n')
   userAgeInput = strings.Replace(userAgeInput, "\n", "", -1)
   userAge, _ := strconv.ParseInt(userAgeInput, 0, 64)
+
+  if userAge >= 18 {
+    fmt.Println("Welcome to the club!")
+  }
 }
