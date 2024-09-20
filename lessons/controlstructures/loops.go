@@ -6,6 +6,7 @@ import (
   "fmt"
   "strings"
   "errors"
+  "strconv"
 )
 
 var reader bufio.NewReader(os.Stdin)
@@ -29,12 +30,39 @@ func main() {
   }
 }
 
-func calculateSumUpToNumber() {}
+func calculateSumUpToNumber() {
+  chosenNumber, err := getInputNumber()
+
+  if err != nil {
+    fmt.Println("Invalid number input")
+    return
+  }
+
+  
+
+}
 func calculateFactorial() {}
 func calculateSumManually() {}
 func calculateListSum() {}
 
+func getInputNumber() (int, error) {
+  inputNumber, err := reader.ReadString("\n")
 
+  if err != nil {
+    // fmt.Println("Invalid input!")
+    return 0, err
+  }
+
+  inputNumber = strings.Replace(inputNumber, "\n", "", -1)
+  chosenNumber, err := strconv.ParseInt(inputNumber, 0, 64)
+  
+   if err != nil {
+    // fmt.Println("Invalid input!")
+    return 0, err
+  }
+
+  return chosenNumber, nil
+}
 func getUserChoice() (string, error) {
   fmt.Println("Please make your choice")
   fmt.Println("1) Add up all the numbers of to number X")
