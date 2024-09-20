@@ -15,10 +15,12 @@ func main() {
 
   // isOldEnough := userAge >= 18
   
-  if userAge >= 18 {
+  if userAge >= 30 {
+    fmt.Println("You are eligible for our senior jobs.")
+  } else if userAge == 18 {
     fmt.Println("Welcome to the club!")
   } else {
-    fmt.Println("Sorry, you're not old enough!")
+    fmt.Println("Sorry, you're not old enough.")
   }
 
   fmt.Println("Goodbye!")
