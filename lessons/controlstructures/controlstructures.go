@@ -12,7 +12,9 @@ func main() {
   userAgeInput = strings.Replace(userAgeInput, "\n", "", -1)
   userAge, _ := strconv.ParseInt(userAgeInput, 0, 64)
 
-  if userAge >= 18 {
+  isOldEnough := userAge >= 18
+  
+  if isOldEnough {
     fmt.Println("Welcome to the club!")
   }
 
