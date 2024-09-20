@@ -1,6 +1,12 @@
 package main
 
-import "bufio"
+import (
+  "bufio"
+  "os"
+  "fmt"
+  "strings"
+  "errors"
+)
 
 var reader bufio.NewReader(os.Stdin)
 func main() {
@@ -21,4 +27,10 @@ func getUserChoice() (string, error) {
   }
 
   userInput = strings.Replace(userInput, "\n", "", -1)
+
+  if userInput == "1" || userInput == "2" || userInput == "3" || userInput == "4" {
+    return userInput, nil
+  } else {
+    return "", errors.New("Invalid input!")
+  }
 }
