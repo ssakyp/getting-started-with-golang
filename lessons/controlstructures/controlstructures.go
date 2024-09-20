@@ -7,5 +7,8 @@ import (
 
 func main() {
   reader := bufio.NewReader(os.Stdin)
-  reader.ReadString('\n')
+  fmt.Print("Please enter your age: ")
+  userAgeInput := reader.ReadString('\n')
+  userAgeInput = strings.Replace(userAgeInput, "\n", "", -1)
+  userAge, _ := strconv.ParseInt(userAgeInput, 0, 64)
 }
