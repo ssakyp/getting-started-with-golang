@@ -31,6 +31,7 @@ func main() {
 }
 
 func calculateSumUpToNumber() {
+  fmt.Print("Please enter your number: ")
   chosenNumber, err := getInputNumber()
 
   if err != nil {
@@ -50,6 +51,7 @@ func calculateSumManually() {}
 func calculateListSum() {}
 
 func getInputNumber() (int, error) {
+  fmt.Print("Please make your choice: ")
   inputNumber, err := reader.ReadString("\n")
 
   if err != nil {
