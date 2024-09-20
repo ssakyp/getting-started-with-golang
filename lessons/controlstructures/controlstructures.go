@@ -13,7 +13,11 @@ func main() {
   userAgeInput = strings.Replace(userAgeInput, "\n", "", -1)
   userAge, err := strconv.ParseInt(userAgeInput, 0, 64)
 
-  fmt.Println(err)
+  if err != nil {
+    fmt.Println(err)
+    return // to stop the execution of the function
+  }
+  
   // isOldEnough := userAge >= 18
   
   if (userAge >= 30 && userAge < 50) || userAge >= 50 {
