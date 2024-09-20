@@ -49,12 +49,28 @@ func calculateSumUpToNumber() {
   fmt.Printf("Result: %v", sum)
 
 }
-func calculateFactorial() {}
+
+func calculateFactorial() {
+  fmt.Print("Please enter your number: ")
+  chosenNumber, err := getInputNumber()
+
+  if err != nil {
+    fmt.Println("Invalid number input")
+    return
+  }
+
+  factorial := 1
+  for i := 1; i <= chosenNumber; i++ {
+    factorial = factorial * i
+  }
+
+  fmt.Printf("Factorial: %v", factorial)
+}
+
 func calculateSumManually() {}
 func calculateListSum() {}
 
 func getInputNumber() (int, error) {
-  fmt.Print("Please make your choice: ")
   inputNumber, err := reader.ReadString("\n")
 
   if err != nil {
@@ -79,6 +95,7 @@ func getUserChoice() (string, error) {
   fmt.Println("3) Sum up manually entered numbers")
   fmt.Println("4) Sum up a list of entered numbers")
 
+  fmt.Print("Please make your choice: ")
   userInput, err := reader.ReadString("\n")
 
   if err != nil {
