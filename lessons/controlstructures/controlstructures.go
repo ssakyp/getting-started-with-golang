@@ -15,4 +15,6 @@ func main() {
   if userAge >= 18 {
     fmt.Println("Welcome to the club!")
   }
+
+  fmt.Println("Goodbye!")
 }
