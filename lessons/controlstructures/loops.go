@@ -38,9 +38,7 @@ func calculateSumUpToNumber() {
     fmt.Println("Invalid number input")
     return
   }
-
   fmt.Println(chosenNumber)
-
   sum := 0
   
   for i := 1; i <= chosenNumber; i++ {
@@ -80,7 +78,28 @@ func calculateSumManually() {
 
   fmt.Printf("Result: %v", sum)
 }
-func calculateListSum() {}
+
+func calculateListSum() {
+  fmt.Println("Please enter a comma-separated list of numbers: ")
+
+   inputNumber, err := reader.ReadString("\n")
+
+  if err != nil {
+    fmt.Println("Invalid input!")
+    return 0, err
+  }
+  
+  inputNumberList = strings.Replace(inputNumber, "\n", "", -1)
+  // "1,2,3,4,5,6,7,8,9"
+  inputNumbers := strings.Split(inputNumberList, ",")
+  sum := 0
+  for index, value := range inputNumbers{
+    fmt.Printf("Index: %v, Value: %v\n", index, value)
+    number, _ := strconv.ParseInt(value, 0, 64)
+    sum = sum + int(number)
+    fmt.Printf("Result: %v\n", sum)
+  }
+}
 
 func getInputNumber() (int, error) {
   inputNumber, err := reader.ReadString("\n")
