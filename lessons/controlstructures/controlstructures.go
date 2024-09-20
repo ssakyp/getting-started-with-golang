@@ -11,8 +11,9 @@ func main() {
   fmt.Print("Please enter your age: ")
   userAgeInput := reader.ReadString('\n')
   userAgeInput = strings.Replace(userAgeInput, "\n", "", -1)
-  userAge, _ := strconv.ParseInt(userAgeInput, 0, 64)
+  userAge, err := strconv.ParseInt(userAgeInput, 0, 64)
 
+  fmt.Println(err)
   // isOldEnough := userAge >= 18
   
   if (userAge >= 30 && userAge < 50) || userAge >= 50 {
